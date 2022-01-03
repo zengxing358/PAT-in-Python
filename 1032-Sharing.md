@@ -131,7 +131,32 @@ while addr != -1:
 else:
     print(-1)
 ```
+```python
+#python这个能过
+head1,head2,n=map(int, input().split())
+dic={}
+for _ in range(n):
+    Address,Data,Next=input().split()
+    dic[int(Address)]=int(Next)
 
+p=head1
+q=head2
+while True:
+    if p==q:
+        if p==-1:
+            print(p)
+        else:
+            print("%05d" % p)
+        break
+    if p not in dic:
+        p=head2
+    else:
+        p=dic[p]
+    if q not in dic:
+        q=head1
+    else:
+        q=dic[q]
+```
 ### C++
 
 ```c++
